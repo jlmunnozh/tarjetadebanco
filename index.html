@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjeta de Banco</title>
+</head>
+<body>
+    <h1>Tarjeta de Banco</h1>
+
+    <script>
+        // BCP 4557 && Interbank 4213 && BBVA 4551
+        alert('Bienvenido al Banco Estofador');
+        let cardNumber =prompt('Por favor ingrese sus primeros seis digitos');
+        alert(cardNumber);
+        if(cardNumber=='4551'){
+            alert('Su Tarjeta es BBVA');
+        }else{
+            alert('No trabajamos con su banco');
+        };
+    </script>
+</body>
+</html>
