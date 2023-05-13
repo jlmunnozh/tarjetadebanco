@@ -11,13 +11,30 @@
     <script>
         // BCP 4557 && Interbank 4213 && BBVA 4551
         alert('Bienvenido al Banco Estofador');
-        let cardNumber =prompt('Por favor ingrese sus primeros seis digitos');
-        alert(cardNumber);
-        if(cardNumber=='4551'){
-            alert('Su Tarjeta es BBVA');
-        }else{
-            alert('No trabajamos con su banco');
-        };
+        // let cardNumber =prompt('Por favor ingrese sus primeros seis digitos');
+        // alert(cardNumber);
+        // // if(cardNumber=='4551'){
+        // //     alert('Su Tarjeta es BBVA');
+        // // }else{
+        // //     alert('No trabajamos con su banco');
+        // // };
+        let cardNumber = prompt('Por favor digite su número de tarjeta');
+        switch (cardNumber) {
+            case '4557':
+                alert('Usted es BCP');
+                alert('Muchas gracias por ser parte del BCP');
+                break;
+            case '4213':
+                alert('Usted es Interbank');
+                alert('Muchas gracias por ser parte de Interbank');
+                break;
+            case '4551':
+                alert('Usted es BBVA');
+                alert('Muchas gracias por ser parte del BBVA');
+                break;        
+            default:
+                break;
+        }
     </script>
 </body>
 </html>
