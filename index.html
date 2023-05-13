@@ -18,23 +18,50 @@
         // // }else{
         // //     alert('No trabajamos con su banco');
         // // };
-        let cardNumber = prompt('Por favor digite su número de tarjeta');
-        switch (cardNumber) {
+        // BCP 4557 && Interbank 4213 && BBVA 4551
+        let cardNumber1 = prompt('Por favor digite los cuatro (4) primeros digitos de su tarjeta');
+        let validationCard = false;
+
+        switch (cardNumber1) {
             case '4557':
                 alert('Usted es BCP');
                 alert('Muchas gracias por ser parte del BCP');
+                validationCard = true;
                 break;
             case '4213':
                 alert('Usted es Interbank');
                 alert('Muchas gracias por ser parte de Interbank');
+                validationCard = true;
                 break;
             case '4551':
                 alert('Usted es BBVA');
                 alert('Muchas gracias por ser parte del BBVA');
+                validationCard = true;
                 break;        
             default:
+                alert('Nosotros no trabajamos con su banco');
                 break;
         }
+
+        if (validationCard) {
+            let databases = {
+                database1: '455780455780',
+                database2: '421355421355',
+                database3: '455103455103',                         
+            }
+            cardNumber = prompt('Ingrese los 8 numeros restantes de tarjeta completo');
+            tarjeta=cardNumber1+cardNumber;
+
+            if(databases.database1 == tarjeta){
+                alert('Gracias');
+            }else {
+                alert('Mentira');
+                //console.log('Mentira');
+            }
+        } else {
+            alert('No cambio nada');
+        }
+
     </script>
 </body>
 </html>
