@@ -49,19 +49,43 @@
                 database2: '421355421355',
                 database3: '455103455103',                         
             }
-            cardNumber = prompt('Ingrese los 8 numeros restantes de tarjeta completo');
-            tarjeta=cardNumber1+cardNumber;
 
-            if(databases.database1 == tarjeta){
-                alert('Gracias');
-            }else {
-                alert('Mentira');
-                //console.log('Mentira');
+            let digital = {
+                database1: {
+                    tarjeta: 455780455780,
+                    money: 12345,
+                },
+
+                database2: {
+                    tarjeta: 421355421355,
+                    money: 12347,
+                },
+
+                database3: {
+                    tarjeta: 455103455103,
+                    money: 12587,
+                },
             }
+            cardNumber = prompt('Ingrese los 8 numeros restantes de la tarjeta');
+            tarjeta=cardNumber1+cardNumber;
+            // if(databases.database1 == tarjeta){
+            //     alert('Gracias');
+            // }else {
+            //     alert('Mentira');
+            //     //console.log('Mentira');
+            // }
+            if (digital.database1.tarjeta == tarjeta) {
+        alert('Gracias 1');
+      } else if (digital.database2.tarjeta == tarjeta) {
+        alert('Gracias 2');
+      } else if (digital.database3.tarjeta == tarjeta) {
+        alert('Gracias 3: ')
+      } else {
+        alert('No coincide con nuestra base de datos')
+      }
         } else {
             alert('No cambio nada');
         }
-
     </script>
 </body>
 </html>
